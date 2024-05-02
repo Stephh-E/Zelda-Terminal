@@ -142,9 +142,9 @@ food_combinations = {
 
 
 def combine_food(items):
-    items=sorted(items)
+    items = sorted(items)
     combination = tuple(items)
-    return food_combinations.get (combination, 'Ew, you’ve made Dubious Food! Not sure if you should eat that :( ')
+    return food_combinations.get (combination, "Ew, you've made Dubious Food! Not sure if you should eat that :( ")
 
 def main():
     print('Welcome to the Zelda Food Combiner!')
