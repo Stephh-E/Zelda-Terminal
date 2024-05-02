@@ -1,6 +1,5 @@
 # Dictionary of food combinations
 food_combinations = {
-
     ('any mushrooms'): 'Mushroom Skewer',
     ('any meat', 'any mushrooms'): 'Meat and Mushroom Skewer',
     ('any fish', 'any mushrooms'): 'Fish and Mushroom Skewer',
@@ -126,7 +125,6 @@ food_combinations = {
     ('any fruit', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Fruit Pie',
     ('apple', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Apple Pie',
     ('bird egg', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Egg Tart',
-    ('fresh milk'): 'Warm Milk',
     ('palm fruit', 'hydromelon', 'voltfruit', 'rock salt'): 'Noble Pursuit',
     ('monster extract', 'any meat', 'any seafood'): 'Monster Stew',
     ('monster extract', 'goat butter' 'fresh milk', 'tabantha wheat'): 'Monster Stew',
@@ -138,17 +136,27 @@ food_combinations = {
     ('dark clump', 'hylian rice', 'goron spice'): 'Dark Curry',
     ('dark clump', 'hylian rice', 'rock salt'): 'Dark Rice Ball',
     ('dark clump', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Dark Cake'
-    }
+
+#Food variations:
+    ('raw meat'): 'any meat',
+    ('raw gourmet meat'): 'any meat',
+    ('raw prime meat'): 'any meat',
+    ('raw bird drumstick'): 'any meat',
+    ('raw bird thigh'): 'any meat',
+    ('raw whole bird'): 'any meat',
+
+}
+
 
 
 def combine_food(items):
-    items = sorted(items)
+    items = sorted(item.strip() for item in items)
     combination = tuple(items)
     return food_combinations.get (combination, "Ew, you've made Dubious Food! Not sure if you should eat that :( ")
 
 def main():
     print('Welcome to the Zelda Food Combiner!')
-    print('Enter two or more food items (separated by commas)to see what you get!')
+    print('Enter food items (separated by commas)to see what you get!')
 
     while True:
         user_input = input("type 'quit' to exit: ").strip().split(',')
@@ -156,9 +164,11 @@ def main():
         if user_input[0].strip().lower() == 'quit':
             print("Goodbye!")
             break
+
+        user_input = [item.strip() for item in user_input if item.strip()]
             
-        if len(user_input) < 2 or len(user_input) > 6:
-            print('Please enter between 2 and 6 items.')
+        if len(user_input) < 1 or len(user_input) > 6:
+            print('Please enter between 1 and 6 items.')
             continue
             
         result = combine_food(user_input)
