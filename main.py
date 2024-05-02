@@ -135,9 +135,10 @@ food_combinations = {
     ('dark clump', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Dark Stew',
     ('dark clump', 'hylian rice', 'goron spice'): 'Dark Curry',
     ('dark clump', 'hylian rice', 'rock salt'): 'Dark Rice Ball',
-    ('dark clump', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Dark Cake'
+    ('dark clump', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Dark Cake',
 
 #Food variations:
+    #any meat
     ('raw meat'): 'any meat',
     ('raw gourmet meat'): 'any meat',
     ('raw prime meat'): 'any meat',
@@ -145,7 +146,43 @@ food_combinations = {
     ('raw bird thigh'): 'any meat',
     ('raw whole bird'): 'any meat',
 
-}
+    #any vegetable 
+    ('big hearty radish'):'any vegetable',
+    ('hearty radish'):'any vegetable',
+    ('endura carrot'):'any vegetable',
+    ('swift carrot'):'any vegetable',
+    ('hyrule herb'):'any vegetable',
+    ('fortified pumpkin'):'any vegetable',
+    ('sun pumpkin'):'any vegetable',
+    ('stambulb'):'any vegetable',
+
+    #any plant
+    ('big hearty truffle'): 'any plant',
+    ('hearty truffle'): 'any plant',
+    ('silent princess'): 'any plant',
+    ('korok frond'): 'any plant',
+    ('cool safflina'): 'any plant',
+    ('mighty thistle'): 'any plant',
+    ('armoranth'): 'any plant',
+    ('blue nightshade'): 'any plant',
+    ('elecrtic safflina'): 'any plant',
+    ('swift violet'): 'any plant',
+    ('sundelion'): 'any plant',
+
+    #any mushroom
+    ('any mushroom'): 'any mushrooms',
+    ('endura shroom'): 'any mushrooms',
+    ('rushroom'): 'any mushrooms',
+    ('brightcap'): 'any mushrooms',
+    ('stamella shroom'): 'any mushrooms',
+    ('chillshroom'): 'any mushrooms',
+    ('sunshroom'): 'any mushrooms',
+    ('hylian shroom'): 'any mushrooms',
+    ('zapshroom'): 'any mushrooms',
+    ('silent shroom'): 'any mushrooms',
+    ('ironshroom'): 'any mushrooms',
+    ('skyshroom'): 'any mushrooms',
+    }
 
 
 
@@ -159,7 +196,7 @@ def main():
     print('Enter food items (separated by commas)to see what you get!')
 
     while True:
-        user_input = input("type 'quit' to exit: ").strip().split(',')
+        user_input = input("type 'quit' to exit:").strip().split(',')
         
         if user_input[0].strip().lower() == 'quit':
             print("Goodbye!")
