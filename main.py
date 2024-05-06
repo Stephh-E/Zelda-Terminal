@@ -1,4 +1,53 @@
-# Dictionary of food combinations
+
+# Dictionary of food variations
+food_variations = {
+    # any meat
+    'raw meat': 'any meat',
+    'raw gourmet meat': 'any meat',
+    'raw prime meat': 'any meat',
+    'raw bird drumstick': 'any meat',
+    'raw bird thigh': 'any meat',
+    'raw whole bird': 'any meat',
+
+    # any vegetable 
+    'big hearty radish': 'any vegetable',
+    'hearty radish': 'any vegetable',
+    'endura carrot': 'any vegetable',
+    'swift carrot': 'any vegetable',
+    'hyrule herb': 'any vegetable',
+    'fortified pumpkin': 'any vegetable',
+    'sun pumpkin': 'any vegetable',
+    'stambulb': 'any vegetable',
+
+    # any plant
+    'big hearty truffle': 'any plant',
+    'hearty truffle': 'any plant',
+    'silent princess': 'any plant',
+    'korok frond': 'any plant',
+    'cool safflina': 'any plant',
+    'mighty thistle': 'any plant',
+    'armoranth': 'any plant',
+    'blue nightshade': 'any plant',
+    'electric safflina': 'any plant',
+    'swift violet': 'any plant',
+    'sundelion': 'any plant',
+
+    # any mushroom
+    'any mushroom': 'any mushrooms',
+    'endura shroom': 'any mushrooms',
+    'rushroom': 'any mushrooms',
+    'brightcap': 'any mushrooms',
+    'stamella shroom': 'any mushrooms',
+    'chillshroom': 'any mushrooms',
+    'sunshroom': 'any mushrooms',
+    'hylian shroom': 'any mushrooms',
+    'zapshroom': 'any mushrooms',
+    'silent shroom': 'any mushrooms',
+    'ironshroom': 'any mushrooms',
+    'skyshroom': 'any mushrooms',
+}
+
+#Dictionary of food combinations:
 food_combinations = {
     ('any mushrooms'): 'Mushroom Skewer',
     ('any meat', 'any mushrooms'): 'Meat and Mushroom Skewer',
@@ -90,14 +139,14 @@ food_combinations = {
     ('raw meat', 'hylian rice', 'rock salt'): 'Meat and Rice Bowl',
     ('raw prime meat', 'hylian rice', 'rock salt'): 'Prime Meat and Rice Bowl',
     ('raw gourmet meat', 'hylian rice', 'rock salt'): 'Gourmet Meat and Rice Bowl',
-    ('raw meat', 'hateno cheese' 'hylian rice', 'rock salt'): 'Cheesy Meat Bowl',
-    ('raw prime meat', 'hateno cheese' 'hylian rice', 'rock salt'): 'Prime Cheesy Meat Bowl',
+    ('raw meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Cheesy Meat Bowl',
+    ('raw prime meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Prime Cheesy Meat Bowl',
     ('raw gourmet meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Gourmet Cheesy Meat Bowl',
     ('any plant', 'hylian rice'): 'Veggie Rice Balls',
     ('any mushrooms', 'hylian rice'): 'Mushroom Rice Balls',
     ('any meat', 'hylian rice'): 'Meaty Rice Balls',
     ('any seafood', 'hylian rice'): 'Seafood Rice Balls',
-    ('any plant', 'bird egg' 'hylian rice', 'fresh milk'): 'Veggie Porridge',
+    ('any plant', 'bird egg', 'hylian rice', 'fresh milk'): 'Veggie Porridge',
     ('tabantha wheat', 'rock salt'): 'Wheat Bread',
     ('tabantha wheat', 'rock salt', 'hateno cheese'): 'Melty Cheesy Bread',
     ('tabantha wheat', 'rock salt', 'hylian tomato', 'hateno cheese'): 'Hylian Tomato Pizza',
@@ -137,66 +186,32 @@ food_combinations = {
     ('dark clump', 'hylian rice', 'rock salt'): 'Dark Rice Ball',
     ('dark clump', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Dark Cake',
 
-#Food variations:
-    #any meat
-    ('raw meat'): 'any meat',
-    ('raw gourmet meat'): 'any meat',
-    ('raw prime meat'): 'any meat',
-    ('raw bird drumstick'): 'any meat',
-    ('raw bird thigh'): 'any meat',
-    ('raw whole bird'): 'any meat',
+}
 
-    #any vegetable 
-    ('big hearty radish'):'any vegetable',
-    ('hearty radish'):'any vegetable',
-    ('endura carrot'):'any vegetable',
-    ('swift carrot'):'any vegetable',
-    ('hyrule herb'):'any vegetable',
-    ('fortified pumpkin'):'any vegetable',
-    ('sun pumpkin'):'any vegetable',
-    ('stambulb'):'any vegetable',
-
-    #any plant
-    ('big hearty truffle'): 'any plant',
-    ('hearty truffle'): 'any plant',
-    ('silent princess'): 'any plant',
-    ('korok frond'): 'any plant',
-    ('cool safflina'): 'any plant',
-    ('mighty thistle'): 'any plant',
-    ('armoranth'): 'any plant',
-    ('blue nightshade'): 'any plant',
-    ('elecrtic safflina'): 'any plant',
-    ('swift violet'): 'any plant',
-    ('sundelion'): 'any plant',
-
-    #any mushroom
-    ('any mushroom'): 'any mushrooms',
-    ('endura shroom'): 'any mushrooms',
-    ('rushroom'): 'any mushrooms',
-    ('brightcap'): 'any mushrooms',
-    ('stamella shroom'): 'any mushrooms',
-    ('chillshroom'): 'any mushrooms',
-    ('sunshroom'): 'any mushrooms',
-    ('hylian shroom'): 'any mushrooms',
-    ('zapshroom'): 'any mushrooms',
-    ('silent shroom'): 'any mushrooms',
-    ('ironshroom'): 'any mushrooms',
-    ('skyshroom'): 'any mushrooms',
-    }
-
-
+from itertools import permutations
 
 def combine_food(items):
-    items = sorted(item.strip() for item in items)
-    combination = tuple(items)
-    return food_combinations.get (combination, "Ew, you've made Dubious Food! Not sure if you should eat that :( ")
+    print("Entered items:", items)
+    
+    # Sort the items to ensure consistent ordering
+    sorted_items = sorted(items)
+    
+    # Check if combination of items matches
+    for perm in permutations(sorted_items):
+        combination = tuple(item.strip() for item in perm)
+        print("Checking combination:", combination)
+        if combination in food_combinations:
+            print("Combination match found:", combination)
+            return food_combinations[combination]
+
+    return "Ew, you've made Dubious Food! Not sure if you should eat that :("
 
 def main():
     print('Welcome to the Zelda Food Combiner!')
-    print('Enter food items (separated by commas)to see what you get!')
+    print('Enter food items (separated by commas) to see what you get!')
 
     while True:
-        user_input = input("type 'quit' to exit:").strip().split(',')
+        user_input = input("Type 'quit' to exit:").strip().split(',')
         
         if user_input[0].strip().lower() == 'quit':
             print("Goodbye!")
