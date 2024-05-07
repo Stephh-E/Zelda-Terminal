@@ -1,209 +1,241 @@
 
-# Dictionary of food variations
-food_variations = {
-    # any meat
-    'raw meat': 'any meat',
-    'raw gourmet meat': 'any meat',
-    'raw prime meat': 'any meat',
-    'raw bird drumstick': 'any meat',
-    'raw bird thigh': 'any meat',
-    'raw whole bird': 'any meat',
-
-    # any vegetable 
-    'big hearty radish': 'any vegetable',
-    'hearty radish': 'any vegetable',
-    'endura carrot': 'any vegetable',
-    'swift carrot': 'any vegetable',
-    'hyrule herb': 'any vegetable',
-    'fortified pumpkin': 'any vegetable',
-    'sun pumpkin': 'any vegetable',
-    'stambulb': 'any vegetable',
-
-    # any plant
-    'big hearty truffle': 'any plant',
-    'hearty truffle': 'any plant',
-    'silent princess': 'any plant',
-    'korok frond': 'any plant',
-    'cool safflina': 'any plant',
-    'mighty thistle': 'any plant',
-    'armoranth': 'any plant',
-    'blue nightshade': 'any plant',
-    'electric safflina': 'any plant',
-    'swift violet': 'any plant',
-    'sundelion': 'any plant',
-
-    # any mushroom
-    'any mushroom': 'any mushrooms',
-    'endura shroom': 'any mushrooms',
-    'rushroom': 'any mushrooms',
-    'brightcap': 'any mushrooms',
-    'stamella shroom': 'any mushrooms',
-    'chillshroom': 'any mushrooms',
-    'sunshroom': 'any mushrooms',
-    'hylian shroom': 'any mushrooms',
-    'zapshroom': 'any mushrooms',
-    'silent shroom': 'any mushrooms',
-    'ironshroom': 'any mushrooms',
-    'skyshroom': 'any mushrooms',
-}
-
 #Dictionary of food combinations:
 food_combinations = {
-    ('any mushrooms'): 'Mushroom Skewer',
-    ('any meat', 'any mushrooms'): 'Meat and Mushroom Skewer',
-    ('any fish', 'any mushrooms'): 'Fish and Mushroom Skewer',
-    ('any fish', 'any mushrooms'): 'Fish and Mushroom Skewer',
-    ('any fruit', 'any plant'): 'Steamed Fruit',
-    ('hylian tomatoes', 'any plant'): 'Steamed Tomatoes',
-    ('any mushrooms', 'any plant'): 'Steamed Mushrooms',
-    ('any meat', 'any plant'): 'Steamed Meat',
-    ('any fish', 'any plant'): 'Steamed Fish',
-    ('spicy peppers'): 'Spicy Sauteed Peppers',
-    ('any nut'): 'Sauteed Nuts',
-    ('any plant'): 'Fried Wild Greens', 
-    ('stambulb'): 'Cooked Stambulb',
-    ('stambulb','goat butter'): 'Buttered Stambulb',
-    ('raw meat','goron spice'): 'Spiced Meat Skewer',
-    ('raw prime meat','goron spice'): 'Prime Spiced Meat Skewer',
-    ('raw gourmet meat','goron spice'): 'Gourmet Spiced Meat Skewer',
-    ('any crab','goron spice'): 'Crab Stir-Fry',
-    ('any seafood','raw meat'): 'Meat and Seafood Fry',
-    ('any seafood','raw meat'): 'Meat and Seafood Fry',
-    ('any seafood','prime raw meat'): 'Prime Meat and Seafood Fry',
-    ('any seafood', 'gourmet raw meat'): 'Gourmet Meat and Seafood Fry',
-    ('any plant', 'rock salt'): 'Salt-Grilled Greens',
-    ('any mushrooms', 'rock salt'): 'Salt-Grilled Mushrooms',
+    ('meat', 'mushroom'): 'Meat and Mushroom Skewer',
+    ('fish', 'mushroom'): 'Fish and Mushroom Skewer',
+    ('fruit', 'plant'): 'Steamed Fruit',
+    ('hylian tomatoes', 'plant'): 'Steamed Tomatoes',
+    ('mushroom', 'plant'): 'Steamed Mushrooms',
+    ('meat', 'plant'): 'Steamed Meat',
+    ('fish', 'plant'): 'Steamed Fish',
+    ('spicy peppers',): 'Spicy Sauteed Peppers',
+    ('nut',): 'Sauteed Nuts',
+    ('plant',): 'Fried Wild Greens', 
+    ('stambulb',): 'Cooked Stambulb',
+    ('stambulb', 'goat butter'): 'Buttered Stambulb',
+    ('raw meat', 'goron spice'): 'Spiced Meat Skewer',
+    ('raw prime meat', 'goron spice'): 'Prime Spiced Meat Skewer',
+    ('raw gourmet meat', 'goron spice'): 'Gourmet Spiced Meat Skewer',
+    ('crab', 'goron spice'): 'Crab Stir-Fry',
+    ('seafood', 'raw meat'): 'Meat and Seafood Fry',
+    ('seafood', 'prime raw meat'): 'Prime Meat and Seafood Fry',
+    ('seafood', 'gourmet raw meat'): 'Gourmet Meat and Seafood Fry',
+    ('plant', 'rock salt'): 'Salt-Grilled Greens',
+    ('mushroom', 'rock salt'): 'Salt-Grilled Mushrooms',
     ('raw meat', 'rock salt'): 'Salt-Grilled Meat',
     ('raw prime meat', 'rock salt'): 'Salt-Grilled Prime Meat',
     ('raw gourmet meat', 'rock salt'): 'Salt-Grilled Prime Meat',
-    ('any fish', 'rock salt'): 'Salt-Grilled Fish',
-    ('any crab', 'rock salt'): 'Salt-Grilled Crab',
-    ('any plant', 'goron spice'): 'Herb Saute',
-    ('any mushroom','goron spice'): 'Fragrant Mushroom Saute',
-    ('any meat', 'spicy pepper'): 'Pepper Steak',
-    ('any meat', 'spicy pepper'): 'Pepper Seafood',
-    ('any fish', 'oil jar', 'stambulb'): 'Fragrant Seafood Stew',
+    ('fish', 'rock salt'): 'Salt-Grilled Fish',
+    ('crab', 'rock salt'): 'Salt-Grilled Crab',
+    ('plant', 'goron spice'): 'Herb Saute',
+    ('mushroom', 'goron spice'): 'Fragrant Mushroom Saute',
+    ('meat', 'spicy pepper'): 'Pepper Steak',
+    ('seafood', 'spicy pepper'): 'Pepper Seafood',
+    ('fish', 'oil jar', 'stambulb'): 'Fragrant Seafood Stew',
     ('raw bird','drumstick', 'oil jar'): 'Deep-Fried Drumstick',
     ('raw bird thigh', 'oil jar'): 'Deep-Fried Thigh',
     ('raw whole bird', 'oil jar'): 'Deep-Fried Bird Roast',
-    ('any seafood', 'tabantha wheat','goat butter'): 'Seafood Meuniere',
-    ('any porgy', 'tabantha wheat','goat butter'): 'Porgy Meuniere',
-    ('any salmon', 'tabantha wheat','goat butter'): 'Salmon Meuniere',
-    ('any fruit', 'any mushroom'): 'Fruit and Mushroom Mix',
-    ('any fruit'): 'Simmered Fruit',
-    ('hylian tomato'): 'Simmered Tomato',
-    ('any fruit'): 'Simmered Fruit',
+    ('seafood', 'tabantha wheat','goat butter'): 'Seafood Meuniere',
+    ('porgy', 'tabantha wheat','goat butter'): 'Porgy Meuniere',
+    ('salmon', 'tabantha wheat','goat butter'): 'Salmon Meuniere',
+    ('fruit', 'mushroom'): 'Fruit and Mushroom Mix',
+    ('hylian tomato',): 'Simmered Tomato',
     ('hylian tomato','fresh milk', 'rock salt'): 'Fruity Tomato Stew',
-    ('any mushrooms','hylian tomato'): 'Tomato Mushroom Stew',
-    ('any seafood','hylian tomato'): 'Tomato Seafood Stew',
-    ('any plant','rock salt','fresh milk'): 'Cream of Vegetable Soup',
-    ('any vegetable','rock salt','fresh milk'): 'Veggie Cream Soup',
-    ('any mushroom','rock salt','fresh milk'): 'Cream of Mushroom Soup',
-    ('any meat', 'any plant','rock salt','fresh milk'): 'Creamy Meat Soup',
-    ('any seafood', 'any plant','rock salt','fresh milk'): 'Creamy Seafood Soup',
+    ('mushroom','hylian tomato'): 'Tomato Mushroom Stew',
+    ('seafood','hylian tomato'): 'Tomato Seafood Stew',
+    ('plant','rock salt','fresh milk'): 'Cream of Vegetable Soup',
+    ('vegetable','rock salt','fresh milk'): 'Veggie Cream Soup',
+    ('mushroom','rock salt','fresh milk'): 'Cream of Mushroom Soup',
+    ('meat', 'plant','rock salt','fresh milk'): 'Creamy Meat Soup',
+    ('seafood', 'plant','rock salt','fresh milk'): 'Creamy Seafood Soup',
     ('hearty blueshell snail','goat butter', 'tabantha wheat','fresh milk'): 'Snail Chowder',
     ('radish','hydromelon','voltfruit','fresh milk'): 'Creamy Heart Soup',
-    ('any plant','courser bee honey'): 'Glazed Veggies',
-    ('any mushrooms', 'courser bee honey'): 'Glazed Mushrooms',
-    ('raw meat', 'courser bee honey'): 'Glazed Meat',
+    ('plant','courser bee honey'): 'Glazed Veggies',
+    ('mushroom', 'courser bee honey'): 'Glazed Mushrooms',
+    ('meat', 'courser bee honey'): 'Glazed Meat',
     ('hylian rice', 'goron spice'): 'Curry Rice',
-    ('hylian rice', 'goron spice', 'any vegetable'): 'Vegetable Curry',
-    ('hylian rice', 'goron spice', 'raw meat'): 'Meat Curry',
+    ('hylian rice', 'goron spice', 'vegetable'): 'Vegetable Curry',
+    ('hylian rice', 'goron spice', 'meat'): 'Meat Curry',
     ('hylian rice', 'goron spice', 'raw prime meat'): 'Prime Meat Curry',
     ('hylian rice', 'goron spice', 'raw gourmet meat'): 'Gourmet Meat Curry',
     ('hylian rice', 'goron spice', 'raw bird drumstick'): 'Poultry Curry',
     ('hylian rice', 'goron spice', 'raw bird thigh'): 'Prime Poultry Curry',
     ('hylian rice', 'goron spice', 'raw whole bird'): 'Gourmet Poultry Curry',
-    ('hylian rice', 'goron spice', 'any porgy'): 'Seafood Curry',
+    ('hylian rice', 'goron spice', 'porgy'): 'Seafood Curry',
     ('hylian rice', 'goron spice', 'hateno cheese'): 'Cheesy Curry',
     ('any carrot', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Carrot Stew',
     ('fortified pumpkin', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Pumpkin Stew',
-    ('any meat', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Meat Stew',
+    ('meat', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Meat Stew',
     ('prime meat', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Prime Meat Stew',
     ('gourmet meat', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Gourmet Meat Stew',
-    ('fortified pumpkin', 'any meat'): 'Fortified Meat-Stuffed Pumpkin',
-    ('any vegetable', 'hylian rice', 'goat butter', 'rock salt'): 'Vegetable Risotto',
-    ('any mushroom', 'hylian rice', 'goat butter', 'rock salt'): 'Mushroom Risotto',
-    ('any salmon', 'hylian rice', 'goat butter', 'rock salt'): 'Salmon Risotto',
-    ('any crab', 'hylian rice', 'goat butter', 'rock salt'): 'Crab Risotto',
-    ('any mushrooms', 'hylian rice', 'goat butter', 'hateno cheese', 'rock salt'): 'Cheesy Risotto',
+    ('fortified pumpkin', 'meat'): 'Fortified Meat-Stuffed Pumpkin',
+    ('vegetable', 'hylian rice', 'goat butter', 'rock salt'): 'Vegetable Risotto',
+    ('mushroom', 'hylian rice', 'goat butter', 'rock salt'): 'Mushroom Risotto',
+    ('salmon', 'hylian rice', 'goat butter', 'rock salt'): 'Salmon Risotto',
+    ('crab', 'hylian rice', 'goat butter', 'rock salt'): 'Crab Risotto',
+    ('mushroom', 'hylian rice', 'goat butter', 'hateno cheese', 'rock salt'): 'Cheesy Risotto',
     ('raw bird drumstick', 'hylian rice', 'goat butter', 'bird egg'): 'Poultry Pilaf',
     ('raw bird thigh', 'hylian rice', 'goat butter', 'bird egg'): 'Prime Poultry Pilaf',
     ('raw whole bird', 'hylian rice', 'goat butter', 'bird egg'): 'Gourmet Poultry Pilaf',
     ('mighty porgy', 'iron shell crab', 'hylian rice', 'goat butter', 'rock salt'): 'Seafood Paella',
     ('hylian rice', 'goat butter', 'goron spice'): 'Curry Pilaf',
     ('hylian rice', 'bird egg'): 'Fried Egg and Rice',
-    ('any meat', 'hylian rice', 'oil jar', 'bird egg'): 'Crunchy Fried Rice',
-    ('any porgy', 'hylian rice', 'rock salt'): 'Seafood Fried Rice',
-    ('any crab', 'bird egg', 'hylian rice', 'rock salt'): 'Crab Omelet with Rice',
+    ('meat', 'hylian rice', 'oil jar', 'bird egg'): 'Crunchy Fried Rice',
+    ('porgy', 'hylian rice', 'rock salt'): 'Seafood Fried Rice',
+    ('crab', 'bird egg', 'hylian rice', 'rock salt'): 'Crab Omelet with Rice',
     ('raw meat', 'hylian rice', 'rock salt'): 'Meat and Rice Bowl',
     ('raw prime meat', 'hylian rice', 'rock salt'): 'Prime Meat and Rice Bowl',
     ('raw gourmet meat', 'hylian rice', 'rock salt'): 'Gourmet Meat and Rice Bowl',
     ('raw meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Cheesy Meat Bowl',
     ('raw prime meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Prime Cheesy Meat Bowl',
     ('raw gourmet meat', 'hateno cheese', 'hylian rice', 'rock salt'): 'Gourmet Cheesy Meat Bowl',
-    ('any plant', 'hylian rice'): 'Veggie Rice Balls',
-    ('any mushrooms', 'hylian rice'): 'Mushroom Rice Balls',
-    ('any meat', 'hylian rice'): 'Meaty Rice Balls',
-    ('any seafood', 'hylian rice'): 'Seafood Rice Balls',
-    ('any plant', 'bird egg', 'hylian rice', 'fresh milk'): 'Veggie Porridge',
+    ('plant', 'hylian rice'): 'Veggie Rice Balls',
+    ('mushroom', 'hylian rice'): 'Mushroom Rice Balls',
+    ('meat', 'hylian rice'): 'Meaty Rice Balls',
+    ('seafood', 'hylian rice'): 'Seafood Rice Balls',
+    ('plant', 'bird egg', 'hylian rice', 'fresh milk'): 'Veggie Porridge',
     ('tabantha wheat', 'rock salt'): 'Wheat Bread',
     ('tabantha wheat', 'rock salt', 'hateno cheese'): 'Melty Cheesy Bread',
     ('tabantha wheat', 'rock salt', 'hylian tomato', 'hateno cheese'): 'Hylian Tomato Pizza',
-    ('any meat', 'goat butter', 'tabantha wheat', 'rock salt'): 'Meat Pie',
-    ('any seafood', 'goat butter', 'tabantha wheat', 'rock salt'): 'Fish Pie',
+    ('meat', 'goat butter', 'tabantha wheat', 'rock salt'): 'Meat Pie',
+    ('seafood', 'goat butter', 'tabantha wheat', 'rock salt'): 'Fish Pie',
     ('hylian tomato', 'hateno cheese'): 'Cheesy Tomato',
-    ('any seafood', 'hateno cheese'): 'Cheesy Baked Fish', 
-    ('bird egg'): 'Omelet',
-    ('any plant', 'bird egg' 'goat butter', 'rock salt'): 'Vegetable Omelet',
-    ('any mushrooms', 'bird egg', 'goat butter', 'rock salt'): 'Mushroom Omelet',
-    ('any mushrooms', 'bird egg', 'goat butter', 'rock salt', 'hateno cheese'): 'Cheesy Omelet',
+    ('seafood', 'hateno cheese'): 'Cheesy Baked Fish', 
+    ('bird egg',): 'Omelet',
+    ('plant', 'bird egg', 'goat butter', 'rock salt'): 'Vegetable Omelet',
+    ('mushroom', 'bird egg', 'goat butter', 'rock salt'): 'Mushroom Omelet',
+    ('mushroom', 'bird egg', 'goat butter', 'rock salt', 'hateno cheese'): 'Cheesy Omelet',
     ('apple', 'goat butter'): 'Hot Buttered Apple',
-    ('any fruits', 'courser bee honey'): 'Honeyed Fruits',
-    ('courser bee honey'): 'Energising Honey Candy',
+    ('fruit', 'courser bee honey'): 'Honeyed Fruits',
+    ('courser bee honey',): 'Energising Honey Candy',
     ('mighty banana', 'tabantha wheat', 'cane sugar'): 'Fried Bananas',
     ('bird egg', 'fresh milk', 'cane sugar'): 'Egg Pudding',
     ('tabantha wheat', 'bird egg', 'fresh milk', 'cane sugar'): 'Plain Crepe',
     ('wildberry', 'tabantha wheat', 'bird egg', 'fresh milk', 'cane sugar'): 'Wildberry Crepe',
     ('courser bee honey', 'tabantha wheat', 'bird egg', 'fresh milk', 'cane sugar'): 'Honey Crepe',
-    ('any nut', 'tabantha wheat', 'cane sugar', 'goat butter'): 'Nutcake',
-    ('any fruit', 'tabantha wheat', 'cane sugar'): 'Fruitcake',
+    ('nut', 'tabantha wheat', 'cane sugar', 'goat butter'): 'Nutcake',
+    ('fruit', 'tabantha wheat', 'cane sugar'): 'Fruitcake',
     ('any carrot', 'tabantha wheat', 'cane sugar'): 'Carrot Cake',
-    ('fortified pumpkin', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Pumpkin Pie',
+    ('fortified pumpkin', 'goat butter', 'tabantha wheat', 'cane sugar'): 'Pumpkin Pie',
     ('hateno cheese', 'goat butter', 'tabantha wheat', 'cane sugar'): 'Fruitcake',
-    ('any fruit', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Fruit Pie',
-    ('apple', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Apple Pie',
-    ('bird egg', 'goat butter' 'tabantha wheat', 'cane sugar'): 'Egg Tart',
+    ('fruit', 'goat butter', 'tabantha wheat', 'cane sugar'): 'Fruit Pie',
+    ('apple', 'goat butter', 'tabantha wheat', 'cane sugar'): 'Apple Pie',
+    ('bird egg', 'goat butter', 'tabantha wheat', 'cane sugar'): 'Egg Tart',
     ('palm fruit', 'hydromelon', 'voltfruit', 'rock salt'): 'Noble Pursuit',
-    ('monster extract', 'any meat', 'any seafood'): 'Monster Stew',
-    ('monster extract', 'goat butter' 'fresh milk', 'tabantha wheat'): 'Monster Stew',
+    ('monster extract', 'meat', 'seafood'): 'Monster Stew',
+    ('monster extract', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Monster Stew',
     ('monster extract', 'hylian rice', 'goron spice'): 'Monster Curry',
     ('monster extract', 'hylian rice', 'rock salt'): 'Monster Rice Balls',
     ('monster extract', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Monster Cake',
-    ('dark clump', 'any meat', 'any seafood'): 'Dark Stew',
+    ('dark clump', 'meat', 'seafood'): 'Dark Stew',
     ('dark clump', 'goat butter', 'fresh milk', 'tabantha wheat'): 'Dark Stew',
     ('dark clump', 'hylian rice', 'goron spice'): 'Dark Curry',
     ('dark clump', 'hylian rice', 'rock salt'): 'Dark Rice Ball',
     ('dark clump', 'cane sugar', 'goat butter', 'tabantha wheat'): 'Dark Cake',
 
+# Variations of mushroom recipes
+    ('meat', 'mushroom'): 'Meat and Mushroom Skewer',
+    ('meat', 'hylian shroom'): 'Meat and Mushroom Skewer',
+    ('meat', 'endura shroom'): 'Enduring Meat and Mushroom Skewer',
+    ('meat', 'stamella shroom'): 'Enduring Meat and Mushroom Skewer',
+    ('meat', 'hearty truffle'): 'Hearty Meat and Mushroom Skewer',
+    ('meat', 'big hearty truffle'): 'Hearty Meat and Mushroom Skewer',
+    ('meat', 'chillshroom'): 'Chilly Meat and Mushroom Skewer',
+    ('meat', 'sunshroom'): 'Sunny Meat and Mushroom Skewer',
+    ('meat', 'zapshroom'): 'Electro Meat and Mushroom Skewer',
+    ('meat', 'rushroom'): 'Speedy Meat and Mushroom Skewer',
+    ('meat', 'ironshroom'): 'Mighty Meat and Mushroom Skewer',
+    ('meat', 'silent shroom'): 'Sneaky Meat and Mushroom Skewer',
+
+    ('fish', 'mushroom'): 'Fish and Mushroom Skewer',
+    ('fish', 'hylian shroom'): 'Fish and Mushroom Skewer',
+    ('fish', 'endura shroom'): 'Enduring  Fish and Mushroom Skewer',
+    ('fish', 'stamella shroom'): 'Enduring Fish and Mushroom Skewer',
+    ('fish', 'hearty truffle'): 'Hearty Fish and Mushroom Skewer',
+    ('fish', 'big hearty truffle'): 'Hearty Fish and Mushroom Skewer',
+    ('fish', 'chillshroom'): 'Chilly Fish and Mushroom Skewer',
+    ('fish', 'sunshroom'): 'Sunny Fish and Mushroom Skewer',
+    ('fish', 'zapshroom'): 'Electro Fish and Mushroom Skewer',
+    ('fish', 'rushroom'): 'Speedy Fish and Mushroom Skewer',
+    ('fish', 'ironshroom'): 'Mighty Fish and Mushroom Skewer',
+    ('fish', 'silent shroom'): 'Sneaky Fish and Mushroom Skewer',
+
+    ('fruit', 'mushroom'): 'Fruit and Mushroom Mix',
+    ('fruit', 'hylian shroom'): 'Fruit and Mushroom Mix',
+    ('fruit', 'endura shroom'): 'Enduring Fruit and Mushroom Mix',
+    ('fruit', 'stamella shroom'): 'Enduring Fruit and Mushroom Mix',
+    ('fruit', 'hearty truffle'): 'Hearty Fruit and Mushroom Mix',
+    ('fruit', 'big hearty truffle'): 'Hearty Fruit and Mushroom Mix',
+    ('fruit', 'chillshroom'): 'Chilly Fruit and Mushroom Mix',
+    ('fruit', 'sunshroom'): 'Fruit and Mushroom Mix',
+    ('fruit', 'zapshroom'): 'Electro Fruit and Mushroom Mix',
+    ('fruit', 'rushroom'): 'Speedy Fruit and Mushroom Mix',
+    ('fruit', 'ironshroom'): 'Mighty Fruit and Mushroom Mix',
+    ('fruit', 'silent shroom'): 'Sneaky Fruit and Mushroom Mix'
 }
 
 from itertools import permutations
 
+# Dictionary of mushroom modifiers
+buff_modifiers = {
+    'endura shroom': 'Enduring',
+    'stamella shroom': 'Enduring',
+    'hearty truffle': 'Hearty',
+    'big hearty truffle': 'Hearty',
+    'chillshroom': 'Chilly',
+    'sunshroom': 'Sunny',
+    'zapshroom': 'Electro',
+    'rushroom': 'Speedy',
+    'ironshroom': 'Mighty',
+    'silent shroom': 'Sneaky'
+}
+
+
+# Generate permutations of food items and store them in a list
+new_combinations = []
+for combo in food_combinations.keys():
+    for perm in permutations(combo):
+        new_combinations.append((perm, food_combinations[combo]))
+
+# Add the new combinations to the food_combinations dictionary
+for perm, value in new_combinations:
+    food_combinations[perm] = value
+
+#Calculate the number of hearts based on the recipe
+def calculate_hearts(items):
+    total_hearts = 0
+    
+    # Check each item in the recipe
+    for item in items:
+        # Check if the item is meat or big hearty truffle
+        if item == 'meat':
+            total_hearts += 2
+        # Return Full Recovery if big hearty truffle is present
+        elif item == 'big hearty truffle':
+            return 'Full Recovery'  
+        # All other items contribute 1 heart
+        else:
+            total_hearts += 1  
+    
+    return total_hearts
+
 def combine_food(items):
     print("Entered items:", items)
-    
-    # Sort the items to ensure consistent ordering
-    sorted_items = sorted(items)
-    
-    # Check if combination of items matches
-    for perm in permutations(sorted_items):
-        combination = tuple(item.strip() for item in perm)
-        print("Checking combination:", combination)
-        if combination in food_combinations:
-            print("Combination match found:", combination)
-            return food_combinations[combination]
 
+    # Check if any of the items give Link buffs (powers) that should modify the result
+    modifiers = [buff_modifiers[item] for item in items if item in buff_modifiers]
+    # Concatenate modifiers
+    modifier_str = ' '.join(modifiers) + ' ' if modifiers else ''  
+
+    # Check all possible combinations of items
+    for r in range(1, len(items) + 1):
+        for combo in permutations(items, r):
+            print("Checking combination:", combo)
+            if combo in food_combinations:
+                print("Combination match found:", combo)
+                return modifier_str + food_combinations[combo]
+            
+    # If no matching combination is found, return "Dubious Food"
     return "Ew, you've made Dubious Food! Not sure if you should eat that :("
 
 def main():
@@ -224,7 +256,9 @@ def main():
             continue
             
         result = combine_food(user_input)
+        hearts = calculate_hearts(user_input)
         print('Result:', result)
+        print('Hearts:', hearts)
 
 if __name__ == "__main__":
     main()
