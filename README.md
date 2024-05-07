@@ -64,6 +64,33 @@ Modifier Feature:
 - If a modifier is in the recipe it adds the modifier to the resulting dish's name.
 - Multiple modifiers can be applied if multiple triggering ingredients are present in the combination.
 
+# Here is a flowchart written in psuedo code:
+1 Start: The program starts execution.
+-->
+2 Welcome Message: The program displays "Welcome to The Zelda Food Combiner"
+-->
+3 User Input: The program prompts the user to enter food items separated by commas
+-->
+4 Input Processing: The user input is processed 
+-->
+5 Combination Check: The program checks if any combination of the entered food items matches a predefined recipe
+-->
+6 If a match is found, it proceeds to the next step
+-->
+7 If no match is found, it displays a message indicating that 'dubious food' has been made
+-->
+8 Buff Modifier Check: The program checks if any of the entered food items provide Link buffs (powers)
+-->
+9 Result Display: The program displays the result of the food combination along with any modifiers
+-->
+10 Hearts Calculation: The program calculates the number of hearts provided by the food combination
+-->
+11 Repeat or Quit: The program prompts the user to either enter another set of food items or quit
+-->
+12 If the user chooses to enter another set of food items, the program loops back to step 3
+-->
+13 If the user chooses to quit, the program ends.
+
 ## Develop an implementation Plan
 
 1. Food Combination Dictionary
