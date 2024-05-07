@@ -149,7 +149,6 @@ buff_modifiers = {
 variations_in_recipe = {
     ("meat", "mushroom"): "Meat and Mushroom Skewer",
     ("meat", "hylian shroom"): "Meat and Mushroom Skewer",
-    ("meat", "endura shroom"): "Meat and Mushroom Skewer",
     ("meat", "stamella shroom"): "Meat and Mushroom Skewer",
     ("meat", "hearty truffle"): "Meat and Mushroom Skewer",
     ("meat", "big hearty truffle"): "Meat and Mushroom Skewer",
@@ -185,6 +184,7 @@ variations_in_recipe = {
     ("fruit", "silent shroom"): "Fruit and Mushroom Mix"
 }
 
+from itertools import combinations
 from itertools import permutations
 
 # Generate permutations of food items and store them in a list
@@ -224,13 +224,18 @@ def combine_food(items):
     # Concatenate modifiers
     modifier_str = ' '.join(modifiers) + ' ' if modifiers else ''  
 
-    # Check all possible combinations of items
+    # Generate all possible subsets of items
     for r in range(1, len(items) + 1):
-        for combo in permutations(items, r):
+        for combo in combinations(items, r):
             print("Checking combination:", combo)
-            if combo in food_combinations:
+            sorted_combo = tuple(sorted(combo))
+            if sorted_combo in food_combinations:
                 print("Combination match found:", combo)
-                return modifier_str + food_combinations[combo]
+                return modifier_str + food_combinations[sorted_combo]
+            # Check for variations in recipe
+            elif sorted_combo in variations_in_recipe:  
+                print("Variation match found:", combo)
+                return modifier_str + variations_in_recipe[sorted_combo]
             
     # If no matching combination is found, return "Dubious Food"
     return "Ew, you've made Dubious Food! Not sure if you should eat that :("
